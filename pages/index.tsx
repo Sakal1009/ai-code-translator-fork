@@ -117,7 +117,7 @@ export default function Home() {
     if (hasTranslated) {
       handleTranslate();
     }
-  }, [outputLanguage]);
+  }, [outputLanguage, hasTranslated, handleTranslate]);
 
   useEffect(() => {
     const apiKey = localStorage.getItem('apiKey');
