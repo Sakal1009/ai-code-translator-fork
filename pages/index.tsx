@@ -139,8 +139,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
-        <div className="flex flex-col items-center justify-center mt-10 sm:mt-20">
-          <img src="/favicon.ico" className="w-8"/>
+        <div className="flex flex-row items-center justify-end">
+          <Link href="https://proofofme.fun">
+            <button>
+              Back to Web
+            </button>
+          </Link>
+        </div>
+        <div className="flex flex-row items-center justify-center mt-10 sm:mt-20">
+          <img src="/favicon.ico" className="w-16" />
           <div className="text-4xl font-bold">AI Code Translator</div>
         </div>
 
@@ -164,8 +171,8 @@ export default function Home() {
           {loading
             ? 'Translating...'
             : hasTranslated
-            ? 'Output copied to clipboard!'
-            : 'Enter some code and click "Translate"'}
+              ? 'Output copied to clipboard!'
+              : 'Enter some code and click "Translate"'}
         </div>
 
         <div className="mt-6 flex w-full max-w-[1200px] flex-col justify-between sm:flex-row sm:space-x-4">
